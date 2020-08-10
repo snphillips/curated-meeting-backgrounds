@@ -1,0 +1,66 @@
+
+React App
+
+to start: npm start
+
+===============================
+
+Updating Client (React App) with Surge:
+
+
+$ cd client (if you're not in there already)
+$ npm run build
+$ cd build
+$ surge --domain https://meeting-background-maker.surge.sh/
+
+=================================================
+
+How to add more curated sets:
+
+1) create a json in /src/CuratedSets, copying the format of the others
+2) create a folder in /public/meeting-backgrounds/curatedSets/ with the name of the curated set in camel case
+3) add that folder name to .surgeignore
+4) import new curated set name at top of App.js
+5) add new curated set name to curatedSets state array in App.js
+--You should now see your curated set showing up in the curated set section--
+6) Once you've downloaded images to the folder, you should see them on the site
+7) Make a zip folder of the new set
+
+
+
+
+
+
+
+
+===========================================
+How to update NPM packages:
+
+You have lots of dependecies, so this will come in handy:
+
+https://bytearcher.com/articles/using-npm-update-and-npm-outdated-to-update-dependencies/
+
+Ask npm to list which packages have newer versions available using npm outdated:
+
+$ npm outdated
+
+Ask npm to list which GLOBAL packages have newer versions available using npm outdated:
+
+$ npm outdated -g
+
+
+Then you ask npm to install the latest version of a package. You can ask for the latest version with the @latest tag. You should also use the --save flag to update package.json.
+
+$ npm install lodash@latest --save
+
+
+If you want to update all global packages
+
+$ npm update -g
+
+If you want to update specific global package
+
+$ npm update -g <package_name>
+
+============================================
+

@@ -1,0 +1,575 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
+  font-display: swap;
+}
+
+/*==============================
+General Styling
+================================*/
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 1rem;
+  height: 100%;
+}
+
+.app-container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1140px;
+  height: 100%;
+  min-height: 96vh;
+  background-color: #000;
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  color: #efefef;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  background-color: #efefef;
+  text-decoration: none;
+}
+
+
+button {
+  display: block;
+  margin: .5rem auto;
+  color: #efefef;
+  background: #000;
+  border: 2px solid #efefef;
+  padding: 6px 12px;
+  text-align: center !important;
+  text-decoration: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  color: #000 !important;
+  background-color: #efefef;
+}
+
+/* save for now but delete if you get masonry to work */
+.image-grid {
+  /*columns: 260px;*/
+  /*grid-column-gap: 0;*/
+}
+
+.card {
+  text-align: left;
+  break-inside: avoid-column;
+  margin-bottom: 1rem;
+}
+
+#component-sections {
+  /* as a flex item */
+  flex-grow: 1;
+
+  /* as a flex container */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.component {
+  height: 100%;
+}
+
+/*==========================*/
+ /* Toggle States */
+/*==========================*/
+
+/* for section headings*/
+.heading-active {
+  border-bottom: 2px solid #000;
+}
+
+.heading-not-active {
+  color: #d6d6d6;
+  border-bottom: 2px solid #fff;
+}
+
+/*==========================*/
+ /* Headings */
+/*==========================*/
+.header-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+h1.header {
+  margin: 0;
+  max-width: 100%;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 5rem;
+  line-height: .6;
+  text-transform: uppercase;
+  padding: .5rem 0 2rem;
+  letter-spacing: -6px;
+  /*text-shadow: 2px 2px 0 #fff;*/
+}
+
+#section-headers {
+  display: flex;
+  flex-direction: row;
+}
+
+
+h3 {
+  color: #efefef;
+  background: #000;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  margin: .25rem 0;
+  padding: .5rem;
+}
+
+.set-heading {
+  color: #efefef;
+  font-family: 'Bebas Neue', sans-serif;
+  display: inline-block;
+  position: relative;
+  margin: 0 1rem 0 0;
+  top: 2px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  /*border-bottom: 2px solid #fff;*/
+  background: #000;
+  padding: .5rem 2rem;
+  cursor: pointer;
+}
+
+.user-generated-set-heading {
+  border-bottom: 2px solid #000;
+}
+
+.curated-set-heading {
+  border-bottom: 2px solid #fff;
+}
+
+
+
+/*==========================*/
+/* Masonry npm package */
+/*==========================*/
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column .curated-set-card {
+  margin-bottom: 30px;
+}
+
+
+
+/*==========================*/
+/* Header */
+/*==========================*/
+
+
+p {
+  color: #efefef;
+  font-weight: 600;
+  line-height: 1.2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p:first-of-type {
+ margin-top: 0;
+}
+
+/*==============================
+app description
+================================*/
+.app-description {
+  margin-right: 1rem;
+}
+
+/*==============================
+filter buttons
+================================*/
+.filter-message {
+  color: #efefef;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  font-family: 'Open Sans', sans-serif;
+  margin-right: 1rem;
+}
+
+
+.filters-component {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: inline-block;
+}
+
+
+button.filter-button {
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+
+/*input:hover {
+  background-color: rgba(0,0,0,.8);
+}*/
+
+button.active {
+  color: #000;
+  background: #efefef;
+  border: 2px solid #efefef;
+}
+
+.spinner-container {
+  display: inline-block;
+}
+
+#tag {
+  width: 14.5em;
+}
+
+/*==============================
+Your Backgrounds
+================================*/
+.user-generated-set-heading-div {
+  text-align: right;
+}
+
+
+#user-generated-set-window {
+  display: block;
+  border: 2px solid #efefef;
+  color: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+
+
+
+/*==============================
+Results
+================================*/
+#results-component{
+  /*display: none;  will be changed to block in app.js" */
+  display: block;
+}
+
+/*.pre-selected-images-gallery,
+.selected-images-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}*/
+
+img {
+  cursor: pointer;
+  width: 100%;
+  /*max-width: 400px;*/
+}
+
+.rotate-image {
+  transform: 90deg;
+}
+
+.item-title {
+  margin: 5px 0;
+  font-size: .9rem;
+}
+
+.results-button-in-collection,
+.results-button-add-to-collection {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.results-button-remove-from-collection {
+  color: #000;
+  background: #efefef;
+}
+
+.results-button-remove-from-collection:hover {
+  color: #efefef !important;
+  background: #000;
+}
+
+.results-button-add-to-collection {
+  color: #efefef;
+  background: #000;
+}
+
+.filter {
+
+}
+
+.collection {
+
+}
+
+.result-img,
+.selected-img {
+  /*max-width: 250px;*/
+}
+
+.download {
+
+}
+
+/*
+Default is display: block
+If either container has images, message will
+display: none;
+*/
+
+.default-filtered-message,
+.default-selected-message {
+  display: block;
+}
+
+
+
+
+/*==============================
+Download Button
+================================*/
+.download-button {
+  display: none;
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/*==============================
+Selected Images
+================================*/
+#selected-images-component {
+  /*display: none;*/
+  display: block;
+}
+
+
+/*==============================
+Curated Sets
+================================*/
+.curated-set-heading-div {
+  text-align: right;
+  cursor: pointer;
+}
+
+#curated-set-window {
+  display: none;
+  border: 2px solid #efefef;
+  color: #fff;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+
+/*#curated-sets-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+*/
+.curated-set-card {
+  /*border: 2px solid white;*/
+}
+
+.curated-set-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.curated-images-gallery {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+}
+
+.curated-image {
+  display: inline-block;
+
+}
+
+button.curated-set-view-all-button,
+button.curated-set-download-button {
+  width: 100%;
+}
+
+
+/*==============================
+Footer
+================================*/
+.footer-link {
+  color: #efefef !important;
+  font-size: 1rem;
+  font-weight: 500;
+  /* to keep it at the bottom of app */
+  align-self: flex-end;
+  flex-shrink: 0;
+  transition: .3s;
+}
+
+.footer-link:hover {
+  color: #fff !important;
+  background-color: #000 !important;
+}
+
+/******************************************************************/
+/*=========================
+Media Queries - computer
+4 column gallery
+==========================*/
+@media (max-width: 1400px) {
+
+.image-grid {
+  /*display: grid;*/
+  /* 4 colums, all the same width */
+  /*grid-template-columns: auto auto auto auto;*/
+  /*grid-template-rows: auto;*/
+}
+
+.card {
+    /*width: 40%;*/
+  }
+
+ }
+
+
+
+/*=========================
+Media Queries - small computer
+3 column gallery
+==========================*/
+@media (max-width: 1000px) {
+
+  h1.header {
+    font-size: 4rem;
+  }
+
+
+.image-grid {
+  /*display: grid;*/
+  /* 3 colums, all the same width */
+  /*grid-template-columns: auto auto auto;*/
+  /*grid-template-rows: auto;*/
+}
+
+.card {
+    /*width: 40%;*/
+  }
+
+ }
+
+
+/*=========================
+Media Queries - tablets
+2 column gallery
+==========================*/
+@media (max-width: 700px) {
+
+  h1.header {
+    font-size: 3.5rem;
+  }
+
+.set-heading {
+  font-size: 1.25rem;
+  margin: 0 .5rem 0 0;
+  padding: .25rem 1rem;
+}
+
+.filter-message {
+  font-size: 15px;
+}
+
+.filters-component {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-grid {
+    /*display: grid;*/
+    /* 2 colums, all the same width */
+    /*grid-template-columns: auto auto;*/
+  }
+
+  .card {
+    /*width: 50%;*/
+  }
+
+}
+
+/*=========================
+Media Queries - phones
+1 column gallery
+/*==========================*/
+@media (max-width: 415px) {
+
+  h1.header {
+    font-size: 3rem;
+  }
+
+
+.image-grid {
+    /*display: grid;*/
+    /* 1 colum, automatically calculate width */
+    /*grid-template-columns: auto;*/
+  }
+
+  .card {
+    /*width: 100%;*/
+    padding: .25rem 0;
+    margin-right: unset;
+    margin-bottom: .5rem;
+  }
+
+
+
+
+ }

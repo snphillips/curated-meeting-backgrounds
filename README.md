@@ -1,12 +1,10 @@
-## About Meeting Background Maker Client
+## About Curated Meeting Backgrounds
 
-_Companion to Meeting Background Maker Server: https://github.com/snphillips/meeting-background-maker-server_
 
-This web app allows users to view items from the Cooper Hewitt Design Museum's collection
+This web app allows users to download curated image sets to be used as online meeting backgrounds. All images originate from the Cooper Hewitt Design Museum's collection
 
 ### Getting Started
 
-Follow the instructions to install the server first, then come back here: https://github.com/snphillips/meeting-background-maker-server
 
 Clone this repo:
 
