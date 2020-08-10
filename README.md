@@ -9,7 +9,7 @@ This web app allows users to download curated image sets to be used as online me
 Clone this repo:
 
 `````````
-`git clone https://github.com/snphillips/meeting-background-maker-client.git`
+`git clone https://github.com/snphillips/curated-meeting-backgrounds.git`
 `````````
  
 Change directories into the project folder:
@@ -28,20 +28,14 @@ Run npm to install all the dependencies:
 Start the React server:
 
 `````````
-`nodemon`
+`npm start`
 `````````
 Your browser should open to http://localhost:3000/ Voila!
 
 
 ### Made With
-* Cooper Hewitt Museum API
 * Create-React-App
-* axios
-* file-saver
-* jimp
-* jszip
 * lodash
-* nodemon
 * react-spinners
 
 
