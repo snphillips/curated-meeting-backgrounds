@@ -15,7 +15,7 @@ Clone this repo:
 Change directories into the project folder:
 
 `````````
-cd meeting-background-maker-client
+cd curated-meeting-backgrounds
 `````````
 
 
